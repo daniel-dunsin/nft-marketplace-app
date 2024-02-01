@@ -20,10 +20,7 @@ export default function SingleNFT(props: Props) {
   const navigation: NavigationProp<ParamListBase> = useNavigation();
 
   return (
-    <Pressable
-      onPress={() => {
-        navigation.navigate("NFTDetails", { id: props.id });
-      }}
+    <View
       style={{
         width: "100%",
         marginVertical: 20,
@@ -118,6 +115,9 @@ export default function SingleNFT(props: Props) {
             <Text style={{ fontWeight: "500" }}>${props?.price}</Text>
 
             <Pressable
+              onPress={() => {
+                navigation.navigate("NFTDetails", { id: props.id });
+              }}
               style={{
                 paddingHorizontal: 16,
                 paddingVertical: 10,
@@ -130,6 +130,6 @@ export default function SingleNFT(props: Props) {
           </View>
         </View>
       </View>
-    </Pressable>
+    </View>
   );
 }
