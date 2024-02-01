@@ -35,7 +35,7 @@ export default function NftDetails() {
   }, [id]);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ height: "100%" }}>
       <View style={{ position: "relative" }}>
         <View
           style={{
@@ -180,12 +180,10 @@ export default function NftDetails() {
               >
                 Current Bid
               </Text>
-              <FlatList
-                data={nft?.bids}
-                renderItem={({ item }) => <SingleBid {...item} />}
-                keyExtractor={(item) => item?.id}
-                contentContainerStyle={{ paddingBottom: 150 }}
-              />
+
+              {nft?.bids?.map((item) => (
+                <SingleBid {...item} key={item.id} />
+              ))}
             </View>
           </View>
         </View>

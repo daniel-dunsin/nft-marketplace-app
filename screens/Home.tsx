@@ -7,33 +7,31 @@ import NFTList from "../components/NFTList";
 
 export default function Home() {
   return (
-    <SafeAreaView>
-      <KeyboardAvoidingView>
-        <View style={{ height: "100%" }}>
-          <View>
-            <HomeHeader />
-            <NFTList />
-          </View>
+    <SafeAreaView style={{ height: "100%" }}>
+      <View style={{}}>
+        <View>
+          <HomeHeader />
+          <NFTList />
+        </View>
+        <View
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            zIndex: -1,
+          }}
+        >
           <View
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              height: "100%",
-              width: "100%",
-              zIndex: -1,
+              height: "50%",
+              maxHeight: 350,
+              backgroundColor: COLORS.primary,
             }}
-          >
-            <View
-              style={{
-                height: "50%",
-                maxHeight: 350,
-                backgroundColor: COLORS.primary,
-              }}
-            />
-          </View>
+          />
         </View>
-      </KeyboardAvoidingView>
+      </View>
     </SafeAreaView>
   );
 }

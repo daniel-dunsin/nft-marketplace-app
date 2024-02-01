@@ -11,7 +11,9 @@ export default function NFTList() {
       keyExtractor={(item) => item.id}
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ marginHorizontal: "2.5%" }}
+      contentContainerStyle={{
+        marginHorizontal: "2.5%",
+      }}
     />
   );
 }
